@@ -1,4 +1,6 @@
-:: In the process a simplified view of installing a window manager.
+{!} In the process 
+
+A simplified view of installing a window manager.
 
 [![Release](https://img.shields.io/github/v/release/appath/CustomDWM?label=Pre-release&style=flat-square)](https://github.com/appath/CustomDWM/releases)
 
