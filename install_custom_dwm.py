@@ -82,11 +82,11 @@ def get_mainmenu():
     about changes made to the system)
         """
         print(note_05)
-        os.system("sudo cp --force $HOME/.gitclone/CustomDWM/motd/login ../../etc/pam.d")
+        os.system("sudo cp --force $HOME/.gitclone/CustomDWM/dist/motd/login ../../etc/pam.d")
         print("\n")
 
     elif int(_element) == 7:
-        exit(0)
+        exit.__str__()
 
     else:
         print(warning)
@@ -97,13 +97,15 @@ def get_mainmenu():
         get_mainmenu()
 
     else:
-        print("\nWARNING: Forced closing of the script!")
-        exit(0)
+        exit.__str__()
 
 if __name__ == "__main__":
     try:
         get_mainmenu()
 
-    except (ValueError, KeyboardInterrupt):
+    except (NameError, ValueError):
         print("\nWARNING: Forced closing of the script!")
+
+    except KeyboardInterrupt:
+        pass
 
