@@ -9,7 +9,7 @@ A simplified view of installing a window manager.
           StatusBAR in the form of an icon . .
           [[ in the process(script) ]]
           
-          clock -
+          clock - displays the current time in StatusBAR
           memory -
           keyboard layout -
           ///
