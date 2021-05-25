@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+#Battery notebook stat
+BAT0='\ue236'
+BAT1='\ue237'
+BATFULL='\ue238'
+BATCHARGING='\ue23a'
+BATWARNING='\ue239'
+
+BAT_ICON=""
+ICON=""
+
+capacity=$(cat /sys/class/power_supply/BAT0/capacity)
+status=$(cat /sys/class/power_supply/BAT0/status)
+
+battery_ () {
+    if [[ "$IDENTIFIER" = "unicode" ]]; then
+        
+    fi
+}
+
+battery_
