@@ -5,5 +5,4 @@ decided to write a simple script (in Python3) to install the window manager DWM.
 
 Install package: [CustomDWM Ubuntu Linux](https://github.com/appath/CustomDWM/releases)
 
-How it will look like (screenshot/screenshot_25.05.2021.png):
-![Custom DWM window manager](screenshot/screenshot_25.05.2021.png)
+How it will look like [screenshot CustomDWM](https://github.com/appath/CustomDWM/screenshot/screenshot_25.05.2021.png)
