@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, sys
+import os
 
 def get_mainmenu():
     back = ["y", "Y", "yes", "YES"]
@@ -54,6 +54,8 @@ def get_mainmenu():
     needed to compile the program
         """
         print(note_02)
+        os.system("sudo apt install build-essential")
+        print("\n")
 
     elif int(_element) == 4:
         note_03 = """
@@ -62,6 +64,8 @@ def get_mainmenu():
     Nvidia or VirtualBox and VMware
         """
         print(note_03)
+        os.system("sudo apt install linux-headers$(uname -r)")
+        print("\n")
 
     elif int(_element) == 5:
         note_04 = """
