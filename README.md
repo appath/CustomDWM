@@ -1,5 +1,7 @@
 :: In the process a simplified view of installing a window manager.
 
+[![Release](https://img.shields.io/github/v/release/appath/CustomDWM?label=Pre-release&style=flat-square)](https://github.com/appath/CustomDWM/releases)
+
 **Note**: decided to write a simple script (in **Python3**) to install the window manager **DWM**.
 ```
   Scripts
@@ -21,5 +23,3 @@ StatusBAR
 <img src="https://github.com/appath/CustomDWM/blob/main/screenshot/screenshot_statusbar_script.png">
 
 Install package: [CustomDWM Ubuntu Linux](https://github.com/appath/CustomDWM/releases)
-
-[![Release](https://img.shields.io/github/v/release/appath/CustomDWM?label=Pre-release&style=flat-square)](https://github.com/appath/CustomDWM/releases)
