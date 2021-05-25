@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-import os
+import os, sys
 
 def get_mainmenu():
-
-    warning = """
-    Sorry, the value entered must be a number from, then try again!
-    """
     back = ["y", "Y", "yes", "YES"]
-
+    warning = """
+    Sorry, the entered value must be a number, please try again!
+    """
     INFO = """
     Installing Minimal Desktop
     Custom Suckless DWM window manager ...
@@ -86,10 +84,11 @@ def get_mainmenu():
         print("\n")
 
     elif int(_element) == 7:
-        exit.__str__()
+        raise SystemExit
 
     else:
         print(warning)
+        raise SystemExit
 
     restart = input("Do you want to return to the main menu? ").lower()
     if restart in back:
@@ -97,15 +96,22 @@ def get_mainmenu():
         get_mainmenu()
 
     else:
-        exit.__str__()
+        raise SystemExit
 
 if __name__ == "__main__":
     try:
         get_mainmenu()
 
-    except (NameError, ValueError):
+    except NameError:
+        #NameError, ValueError
         print("\nWARNING: Forced closing of the script!")
 
-    except KeyboardInterrupt:
+    except ValueError:
+        print("""
+    Sorry, the entered value of numbers, symbols and letters
+    must be a number, please try again!
+        """)
+
+    except (EOFError, KeyboardInterrupt):
         pass
 
