@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+#Memory DIMM
+memory_ () {
+	MEMORY=$(free -m | awk 'NR==2 { printf "%sMb\n", $3 }')
+	if [[ "$IDENTIFIER" = "unicode" ]]; then
+		printf "$MEMORY "
+	fi      
+}
+
+memory_

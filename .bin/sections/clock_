@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#Displays current time
+clock_ () {
+    if [[ "$IDENTIFIER" = "unicode" ]]; then
+        printf "$(date "+%H:%M ")" "%s"
+    fi
+}
+
+clock_

@@ -1,0 +1,51 @@
+;rxvt-256color
+*foreground: #d7d0c7
+*background: #262626
+
+*color0: #0c0c0c
+*color8: #404040
+*color1: #e84f4f
+*color9: #d23d3d
+*color2: #b8d68c
+*color10: #a0cf5d
+*color3: #e1aa5d
+*color11: #f39d21
+*color4: #7dc1cf
+*color12: #4e9fb1
+*color5: #9b64fb
+*color13: #8542ff
+*color6: #6d878d
+*color14: #42717b
+*color7: #dddddd
+*color15: #dddddd
+
+;settings
+*dpi: 89
+*termName: rxvt-256color
+*iso14755: false
+*geometry: 100x25
+*saveLines: 5400
+*internalBorder: 20
+*cursorBlink: true
+*cursorColor: gray
+*colorUL: #8c9440
+*highlightColor: #343434
+*fadecolor: #0c0c0c
+*fading: 40
+*tintColor: #0c0c0c
+*visualBell: false
+*urgentOnBell: true
+*scrollBar: false
+*url-select.launcher: links 
+*url-select.underline: true
+*url-launcher: /usr/bin/xdg-open
+*matcher.button: 1
+*tabbed.tabbar-fg: 4
+*tabbed.tabbar-bg: 0
+*tabbed.tab-fg: 7
+*tabbed.tab-bg: 4
+*loginShell: true
+
+;font
+*font: xft:SF Mono:size=8
+*fontBold: xft:SF Mono:size=8
