@@ -15,7 +15,7 @@ def get_mainmenu():
     GitHub Home https://github.com/appath\n"""
     print(INFO)
 
-    #_element = 0;
+    _element = 0;
     print("1. Set a password or change it to a new one for user")
     print("2. Used to install the newest versions of all <update system> packages")
     print("3. Metapackages required to compile software")
@@ -65,8 +65,10 @@ def get_mainmenu():
 
     elif int(_element) == 5:
         note_04 = """
-    Unnecessar packages on the system are removed
-    Package list: plymouth
+    Unnecessar packages on the system are removed.
+
+    Package list:
+            plymouth
         """
         print(note_04)
         os.system("sudo apt remove plymouth")
