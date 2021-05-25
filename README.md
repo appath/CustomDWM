@@ -6,7 +6,7 @@ A simplified view of installing a window manager.
       StatusBAR - panel with main icons located at the bottom of the screen.
       List:
           battery - the laptop battery can provide information, displays information in the 
-          StatusBAR in the form of an icon. .
+          StatusBAR in the form of an icon . .
           [[ in the process(script) ]]
           
           clock -
