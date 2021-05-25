@@ -10,8 +10,8 @@
           [[ in the process(script) ]]
           
           clock - displays the current time in StatusBAR
-          memory -
-          keyboard layout -
+          memory - displays in the StatusBAR how much memory is occupied
+          keyboard layout - can be switched by keyboard shortcut
           ///
 ```
 
