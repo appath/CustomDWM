@@ -16,6 +16,6 @@
 ```
 StatusBAR
 
-<img src="https://github.com/appath/CustomDWM/blob/main/screenshot/screenshot_statusbar.png">
+<img src="https://github.com/appath/CustomDWM/blob/main/screenshot/screenshot_statusbar_script.png">
 
 Install package: [CustomDWM Ubuntu Linux](https://github.com/appath/CustomDWM/releases)
