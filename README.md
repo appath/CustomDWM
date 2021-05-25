@@ -5,7 +5,9 @@ A simplified view of installing a window manager.
   Scripts
       StatusBAR - panel with main icons located at the bottom of the screen.
       List:
-          battery - 
+          battery - the laptop battery can provide information, displays information in the status bar in the form of an icon
+          [[ in the process(script) ]]
+          
           clock -
           memory -
           keyboard layout -
