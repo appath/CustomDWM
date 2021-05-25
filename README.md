@@ -1,6 +1,8 @@
 :: In the process a simplified view of installing a window manager.
 
 **Note**: decided to write a simple script (in **Python3**) to install the window manager **DWM**.
+
+[![Release](https://img.shields.io/github/v/release/appath/CustomDWM?label=Stable&style=flat-square)](https://github.com/appath/CustomDWM/releases)
 ```
   Scripts
       StatusBAR - panel with main icons located at the bottom of the screen.
