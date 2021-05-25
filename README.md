@@ -11,7 +11,8 @@
           
           clock - displays the current time in StatusBAR
           memory - displays in the StatusBAR how much memory is occupied
-          keyboard layout - can be switched by keyboard shortcut
+          keyboard layout - can be switched using a keyboard shortcut (two layouts English and Russian) if you need to change the layout.
+          Edit the script .bin/sections/keyboard_layout_
           ///
 ```
 StatusBAR
