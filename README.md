@@ -21,4 +21,5 @@ StatusBAR
 <img src="https://github.com/appath/CustomDWM/blob/main/screenshot/screenshot_statusbar_script.png">
 
 Install package: [CustomDWM Ubuntu Linux](https://github.com/appath/CustomDWM/releases)
+
 [![Release](https://img.shields.io/github/v/release/appath/CustomDWM?label=Pre-release&style=flat-square)](https://github.com/appath/CustomDWM/releases)
