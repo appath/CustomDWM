@@ -91,7 +91,11 @@ def get_mainmenu():
     about changes made to the system)
         """
         print(note_05)
-        os.system("sudo cp --force $HOME/.gitclone/CustomDWM/dist/motd/login ../../etc/pam.d")
+        file_motd = os.path.expanduser("~/.gitclone/CustomDWM/login")
+        copy_file_motd = "../../etc/pam.d"
+        filename0 = os.path.basename(file_motd)
+        filename1 = os.path.join(copy_file_motd, filename0)
+        shutil.copy(file_motd, filename1)
         print("\n")
 
     elif int(_element) == 7:
@@ -142,7 +146,7 @@ def get_mainmenu():
 
         if not os.path.exists(target_folder):
             files = os.listdir(source_folder)
-            shutil.copytree(source_folder, target_folder)
+            shutil.copytree(source_folder, target_folder, dirs_exist=True)
 
         print("\n")
 
