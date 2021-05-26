@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import shutil
 
 def get_mainmenu():
     back = ["y", "Y", "yes", "YES"]
@@ -16,13 +17,17 @@ def get_mainmenu():
     print(INFO)
 
     _element = 0;
-    print("1. Set a password or change it to a new one for user")
-    print("2. Used to install the newest versions of all <update system> packages")
-    print("3. Metapackages required to compile software")
-    print("4. Add module (Nvidia, VirtualBox and VMware) support for new hardware")
-    print("5. Remove unnecessary packages on the system")
-    print("6. Disable MOTD this file on Unix-like systems contains message of the day.")
-    print("7. Exit")
+    print("1.  Set a password or change it to a new one for user")
+    print("2.  Used to install the newest versions of all <update system> packages")
+    print("3.  Metapackages required to compile software")
+    print("4.  Add module (Nvidia, VirtualBox and VMware) support for new hardware")
+    print("5.  Remove unnecessary packages on the system")
+    print("6.  Disable MOTD this file on Unix-like systems contains message of the day.")
+    print("7.  Change console TTY font type")
+    print("8.  Install additional packages (and update pip3)")
+    print("9.  Clone the repository to install CustomDWM")
+    print("10. Unfold the wrapper CustomDWM")
+    print("11. Exit")
     _element = input("\n")
 
     if int(_element) == 1:
@@ -90,6 +95,58 @@ def get_mainmenu():
         print("\n")
 
     elif int(_element) == 7:
+        note_06 = """
+    Change console TTY font type ...
+        """
+        print(note_06)
+        os.system("sudo dpkg-reconfigure console-setup")
+        print("\n")
+
+    elif int(_element) == 8:
+        note_07 = """
+    Install additional packages.
+
+    Package list:
+            python3-pip,
+            tree,
+            vim,
+            mc,
+            git ...
+        """
+        note_08 = """
+    Check update PIP3
+        """
+        print(note_07)
+        os.system("sudo apt install vim mc git python3-pip")
+        print(note_08)
+        os.system("sudo pip3 install --upgrade pip")
+        print("\n")
+
+    elif int(_element) == 9:
+        note_09 = """
+    Clone the repository:
+            https://github.com/appath/CustomDWM.git
+        """
+        print(note_09)
+        os.system("git clone https://github.com/appath/CustomDWM.git $HOME/.gitclone/CustomDWM")
+        print("\n")
+
+    elif int(_element) == 10:
+        note_10 = """
+    Unfold the wrapper CustomDWM
+    to the $HOME of the directory ...
+        """
+        print(note_10)
+        source_folder = os.path.expanduser("~/.gitclone/CustomDWM/dist")
+        target_folder = os.path.expanduser("~")
+
+        if not os.path.exists(target_folder):
+            files = os.listdir(source_folder)
+            shutil.copytree(source_folder, target_folder)
+
+        print("\n")
+
+    elif int(_element) == 11:
         raise SystemExit
 
     else:
