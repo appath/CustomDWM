@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+// See LICENSE file for copyright and license details
 
 #include <X11/Xft/Xft.h>
 
@@ -18,7 +18,7 @@ typedef struct {
 		XFontStruct *xfont;
 		XftFont *xft_font;
 	} font;
-} DC;  /* draw context */
+} DC;  // draw context
 
 typedef struct {
 	unsigned long FG;

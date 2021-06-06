@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+// See LICENSE file for copyright and license details
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -101,9 +101,8 @@ drw_free(Drw *drw)
 	free(drw);
 }
 
-/* This function is an implementation detail. Library users should use
- * drw_font_create instead.
- */
+// This function is an implementation detail. Library users should use
+// drw_font_create instead
 static Fnt *
 drw_font_xcreate(Drw *drw, const char *fontname, FcPattern *fontpattern)
 {
@@ -112,12 +111,11 @@ drw_font_xcreate(Drw *drw, const char *fontname, FcPattern *fontpattern)
 	FcPattern *pattern = NULL;
 
 	if (fontname) {
-		/* Using the pattern found at font->xfont->pattern does not yield same
-		 * the same substitution results as using the pattern returned by
-		 * FcNameParse; using the latter results in the desired fallback
-		 * behaviour whereas the former just results in
-		 * missing-character-rectangles being drawn, at least with some fonts.
-		 */
+		// Using the pattern found at font->xfont->pattern does not yield same
+		// the same substitution results as using the pattern returned by
+		// FcNameParse; using the latter results in the desired fallback
+		// behaviour whereas the former just results in
+		// missing-character-rectangles being drawn, at least with some fonts
 		if (!(xfont = XftFontOpenName(drw->dpy, drw->screen, fontname))) {
 			fprintf(stderr, "error, cannot load font: '%s'\n", fontname);
 			return NULL;
@@ -215,28 +213,28 @@ drw_get_width(Drw *drw, int numcolors, const char *text)
 
 	for (i = 0; i < strlen(text); i++) {
 		if (text[i] > 0 && text[i] <= numcolors) {
-			/* we found a color code
-			 * drw_text counted it as a normal character and added one character's width
-			 * we aren't going to render this character, so we remove one character's width */
+			// we found a color code
+			// drw_text counted it as a normal character and added one character's width
+			// we aren't going to render this character, so we remove one character's width
 			w -= curfont->xfont->max_advance_width;
 
 			if (i == 0 || i + 1 == strlen(text)) {
-				/* we're on the first or the last character of the string
-				 * drw_text already added one character's height (divided by 2) as padding to the beginning and end
-				 * we don't want to double this padding, so we skip this character */
+				// we're on the first or the last character of the string
+				// drw_text already added one character's height (divided by 2) as padding to the beginning and end
+				// we don't want to double this padding, so we skip this character
 				continue;
 			}
 
 			if (text[i - 1] > 0 && text[i - 1] <= numcolors) {
-				/* the previous character was also a color code
-				 * we already added padding in the previous iteration
-				 * we don't want to double this padding, so we skip this character */
+				// the previous character was also a color code
+				// we already added padding in the previous iteration
+				// we don't want to double this padding, so we skip this character
 				continue;
 			}
 
-			/* we are somewhere in the middle of the string and the color has changed
-			 * we want to add one character's height (divided by 2) as padding to the end of the previous colored text
-			 * and to the beginning of the new colored text */
+			// we are somewhere in the middle of the string and the color has changed
+			// we want to add one character's height (divided by 2) as padding to the end of the previous colored text
+			// and to the beginning of the new colored text
 			w += curfont->h;
 		}
 	}
@@ -340,7 +338,7 @@ drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, const char *tex
 
 		if (utf8strlen) {
 			drw_font_getexts(curfont, utf8str, utf8strlen, &tex);
-			/* shorten text if necessary */
+			// shorten text if necessary
 			for (len = MIN(utf8strlen, (sizeof buf) - 1); len && (tex.w > w - drw->fonts[0]->h || w < drw->fonts[0]->h); len--)
 				drw_font_getexts(curfont, utf8str, len, &tex);
 
@@ -367,9 +365,7 @@ drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, const char *tex
 			charexists = 0;
 			curfont = nextfont;
 		} else {
-			/* Regardless of whether or not a fallback font is found, the
-			 * character must be drawn.
-			 */
+			// Regardless of whether or not a fallback font is found, the character must be drawn
 			charexists = 1;
 
 			if (drw->fontcount >= DRW_FONT_CACHE_SIZE)
@@ -379,8 +375,7 @@ drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, const char *tex
 			FcCharSetAddChar(fccharset, utf8codepoint);
 
 			if (!drw->fonts[0]->pattern) {
-				/* Refer to the comment in drw_font_xcreate for more
-				 * information. */
+				// Refer to the comment in drw_font_xcreate for more information
 				die("the first font in the cache must be loaded from a font string.\n");
 			}
 

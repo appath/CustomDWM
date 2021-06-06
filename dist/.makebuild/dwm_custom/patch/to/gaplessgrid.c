@@ -7,7 +7,7 @@ gaplessgrid(Monitor *m) {
 	if(n == 0)
 		return;
 
-	/* grid dimensions */
+	// grid dimensions
 	for(cols = 0; cols <= n/2; cols++)
 		if(cols*cols >= n)
 			break;
@@ -15,7 +15,7 @@ gaplessgrid(Monitor *m) {
 		cols = 2;
 	rows = n/cols;
 
-	/* window geometries */
+	// window geometries
 	cw = cols ? m->ww / cols : m->ww;
 	cn = 0;
 	rn = 0;

@@ -1,6 +1,6 @@
 void
 moveresize(const Arg *arg) {
-	/* only floating windows can be moved */
+	// only floating windows can be moved
 	Client *c;
 	c = selmon->sel;
 	int x, y, w, h, nx, ny, nw, nh, ox, oy, ow, oh;
@@ -15,7 +15,7 @@ moveresize(const Arg *arg) {
 		return;
 	if(sscanf((char *)arg->v, "%d%c %d%c %d%c %d%c", &x, &xAbs, &y, &yAbs, &w, &wAbs, &h, &hAbs) != 8)
 		return;
-	/* compute new window position; prevent window from be positioned outside the current monitor */
+	// compute new window position; prevent window from be positioned outside the current monitor
 	nw = c->w + w;
 	if(wAbs == 'W')
 		nw = w < selmon->mw - 2 * c->bw ? w : selmon->mw - 2 * c->bw;
@@ -53,7 +53,7 @@ moveresize(const Arg *arg) {
 	Bool xqp = XQueryPointer(dpy, root, &dummy, &dummy, &msx, &msy, &dx, &dy, &dui);
 	resize(c, nx, ny, nw, nh, True);
 
-	/* move cursor along with the window to avoid problems caused by the sloppy focus */
+	// move cursor along with the window to avoid problems caused by the sloppy focus
 	if (xqp && ox <= msx && (ox + ow) >= msx && oy <= msy && (oy + oh) >= msy)
 	{
 		nmx = c->x - ox + c->w - ow;
