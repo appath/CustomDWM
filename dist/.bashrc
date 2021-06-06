@@ -8,9 +8,6 @@ GNU General Public License.
 EOF
 }
 
-# 
-[ -z "$PS1" ] && return
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
