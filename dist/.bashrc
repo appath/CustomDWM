@@ -1,4 +1,4 @@
-function about() {
+function license() {
 cat <<EOF
 
 This program is free software
@@ -17,7 +17,7 @@ EOF
 #fi
 
 # NodeJS
-#PATH="$HOME/.builds/node-v14.16.0/bin:$PATH"
+#PATH="$HOME/.builds/node-v14.17.0/bin:$PATH"
 
 alias ls='ls --color=auto'
 alias cls='printf "\033c"'
@@ -63,3 +63,6 @@ if [[ $(id -u) -eq 0 ]];then
 else
     PS1="./$ "
 fi
+
+
+
