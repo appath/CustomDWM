@@ -70,7 +70,7 @@
     set tabstop=4                " the width of a TAB is set to 4
     set shiftwidth=4             " indents will have a width of 4
     set softtabstop=4            " sets the number of columns for a TAB
-    set expandtab                 " expand TABs to spaces
+    set expandtab                " expand TABs to spaces
     set title                    " window title
     set number                   " line numbers
     set vb t_vb=                 " disable beep and flashing
