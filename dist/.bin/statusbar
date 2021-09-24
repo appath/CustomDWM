@@ -17,7 +17,7 @@ export IDENTIFIER="unicode"
 #USER window parameter setting utility for X
 while true; do
 
-	xsetroot -name "$(memory_)$(keyboard_layout_)$(clock_)"
+	xsetroot -name "$(selector_)$(memory_)$(keyboard_layout_)$(clock_)"
     sleep 1
 
 done &
