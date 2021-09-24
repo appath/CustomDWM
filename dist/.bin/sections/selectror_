@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#Selector
+selector_ () {
+    if [[ "$IDENTIFIER" = "unicode" ]]; then
+        printf "^ " "%s"
+    fi
+}
+
+selector_
