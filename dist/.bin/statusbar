@@ -10,6 +10,7 @@ DIR=$(dirname "$LOC")
 export IDENTIFIER="unicode"
 
 #Bon appetit, scripts folder
+. "$DIR/sections/selector_"
 . "$DIR/sections/memory_"
 . "$DIR/sections/keyboard_layout_"
 . "$DIR/sections/clock_"
