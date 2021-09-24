@@ -4,7 +4,7 @@ xset fp rehash
 xrdb -merge $HOME/.Xresources
 
 #wallpaper desktop
-$HOME/.fehbg &
+#$HOME/.fehbg &
 
 #status bar panel
 $HOME/.bin/statusbar &
