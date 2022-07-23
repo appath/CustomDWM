@@ -40,8 +40,8 @@
     " Default to same plugin directory as vundle etc
     call plug#begin('~/.vim/bundle')
     
-    " Autocompletion
-    Plug 'zxqfl/tabnine-vim'
+    " Autocompletion EMMET HTML5
+    Plug 'mattn/emmet-vim'
     
     " Configuration status bar statusline vim
     Plug 'itchyny/lightline.vim'
@@ -67,13 +67,11 @@
 """ }}}
 
 """ Base settings {{{
-    set tabstop=4                " the width of a TAB is set to 4
-    set shiftwidth=4             " indents will have a width of 4
-    set softtabstop=4            " sets the number of columns for a TAB
-    set expandtab                " expand TABs to spaces
+    set t_Co=256                 " we include 256 colors
     set title                    " window title
     set number                   " line numbers
-    set vb t_vb=                 " disable beep and flashing
+    set tabstop=4                " the number of spaces that a TAB character is displayed in the TEXT
+    set shiftwidth=4             " the default is used to adjust the width of the indentation in spaces
     set autoindent               " indent when moving to the next line while writing code
     set showmatch                " show the matching part of the pair for [], {} and ()
     set nocompatible             " disable classic Vi compatibility mode
@@ -84,13 +82,16 @@
     set noruler                  " disable ruler
     set history=1024             " store more command history
     set laststatus=2             " always show statusline vim
-    
     set foldmethod=indent        " define blocks based on indentation
     set foldlevel=99             " nesting level
+    set t_vb=                    " don't squeak text
+    set visualbell t_vb=         " turn off the sound in VIM
     nnoremap <space> za          " collapse the code with a combination on the keyboard SPACE
+
+    let g:user_emmet_leader_key=','   " emmet config
     
-    let python_highlight_all = 1    " enable all Python syntax highlighting featurs
-    let g:lightline = { 'colorscheme': 'powerline', }    " statusline vim
+    let python_highlight_all=1   " enable all Python syntax highlighting featurs
+    let g:lightline={ 'colorscheme': 'powerline', }    " statusline vim
     
     """ Return to last edit position when opening files {{{
         augroup LastPosition
