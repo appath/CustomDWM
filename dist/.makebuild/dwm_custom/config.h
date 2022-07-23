@@ -32,11 +32,10 @@ static const int topbar = 0;                    // 1 means bottom bar
 
 // tagging
 static const char *tags[] = {
-    "| ",
+    "MAIN ",
     "DEVELOPMENT ",
     "PENTEST ",
     "MISC ",
-    "SSH ",
     "[ Name:KEY ] "
 };
 
