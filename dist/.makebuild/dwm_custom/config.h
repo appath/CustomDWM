@@ -32,7 +32,7 @@ static const int topbar = 0;                    // 1 means bottom bar
 
 // tagging
 static const char *tags[] = {
-    "主要 ",
+    "MAIN ",
     "DEVELOPMENT ",
     "PENTEST ",
     "MISC ",
